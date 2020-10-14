@@ -15,12 +15,24 @@ export default {
 *{
   margin: 0;
   padding: 0;
+  font-family: "微软雅黑";
   box-sizing: border-box;
 }
-body{
-  font-size: "微软雅黑";
-}
+
 li {
   list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+#app{
+  height: 100vh;
+}
+/* 两端对齐 */
+.flexBetween{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>
