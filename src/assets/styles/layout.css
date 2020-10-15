@@ -16,6 +16,7 @@
     right: 0;
     width: 1.625rem;
     height: 1.625rem;
+    cursor: pointer;
 }
 
 .screen img {
@@ -67,6 +68,7 @@
     height: 1.625rem;
     margin-top: 1.375rem;
     margin-left: 10%;
+    cursor: pointer;
 }
 
 .headerRight1 img {
@@ -80,6 +82,7 @@
     height: 1.75rem;
     margin-top: 1.3125rem;
     margin-left: 10%;
+    cursor: pointer;
 }
 
 .headerRight2 img {

@@ -11,13 +11,13 @@
     </div>
     <div class="headerRight">
       <div class="headerRight1">
-        <img src="../assets/images/layout/icon1.png" />
+        <img @click="onLogin"  src="../assets/images/layout/icon1.png" />
       </div>
       <div class="headerRight1">
         <img src="../assets/images/layout/icon2.png" />
       </div>
       <div class="headerRight2">
-        <img src="../assets/images/layout/icon3.png" />
+        <img  src="../assets/images/layout/icon3.png" />
       </div>
       <div class="headerRightUser">
         <div class="headerRightUserName">管理员</div>
@@ -40,6 +40,9 @@ export default {
     };
   },
   methods: {
+    onLogin(){
+      this.$router.push({path:'/login'})
+    },
     fullScreen(){
       let element = document.documentElement;
       if (this.fullscreen) {
