@@ -12,7 +12,7 @@
       <el-submenu index="1">
         <template slot="title">
           <div class="menuIcon usermenu">
-            <img src="../../static/menu1.png" />
+            <img src="../assets/images/layout/menu1.png" />
           </div>
           <div class="menuM">用户管理</div>
         </template>
@@ -23,37 +23,37 @@
       </el-submenu>
       <el-menu-item index="2">
         <div class="menuIcon">
-          <img src="../../static/menu2.png" />
+          <img src="../assets/images/layout/menu2.png" />
         </div>
         <div class="menuM">目录管理</div>
       </el-menu-item>
       <el-menu-item index="3">
         <div class="menuIcon">
-          <img src="../../static/menu3.png" />
+          <img src="../assets/images/layout/menu3.png" />
         </div>
         <div class="menuM">审批记录</div>
       </el-menu-item>
       <el-menu-item index="4">
         <div class="menuIcon">
-          <img src="../../static/menu4.png" />
+          <img src="../assets/images/layout/menu4.png" />
         </div>
         <div class="menuM">资源管理</div>
       </el-menu-item>
       <el-menu-item index="5">
         <div class="menuIcon">
-          <img src="../../static/menu5.png" />
+          <img src="../assets/images/layout/menu5.png" />
         </div>
         <div class="menuM">角色权限管理</div>
       </el-menu-item>
       <el-menu-item index="6">
         <div class="menuIcon">
-          <img src="../../static/menu6.png" />
+          <img src="../assets/images/layout/menu6.png" />
         </div>
         <div class="menuM">搜索记录</div>
       </el-menu-item>
       <el-menu-item index="7">
         <div class="menuIcon">
-          <img src="../../static/menu7.png" />
+          <img src="../assets/images/layout/menu7.png" />
         </div>
         <div class="menuM">系统日志</div>
       </el-menu-item>
