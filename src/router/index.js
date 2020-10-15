@@ -12,26 +12,26 @@ Vue.use(Router)
 export default new Router({
   mode: "history",
   routes: [
-    {
-      path: '/',
-      name: 'Header',
-      component: Header,
-      redirect:'/home',
-      children: [
-        {
-          path: 'home',
-          name: 'Home',
-          component: Home,
-        }
-      ]
-    },
+    // {
+    //   path: '/',
+    //   name: 'Header',
+    //   component: Header,
+    //   redirect:'/home',
+    //   children: [
+    //     {
+    //       path: 'home',
+    //       name: 'Home',
+    //       component: Home,
+    //     }
+    //   ]
+    // },
     {
       path: '/login',
       name: 'Login',
       component: Login
     },
     {
-      path: '/layout',
+      path: '/',
       name: 'Layout',
       component: Layout,
       redirect:'/home',

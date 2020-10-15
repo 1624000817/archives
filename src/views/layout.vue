@@ -1,18 +1,20 @@
 <template>
   <el-container direction="vertical">
     <Header></Header>
-    <Aside></Aside>
-    <router-view></router-view>
+    <el-container>
+      <Aside></Aside>
+      <router-view></router-view>
+    </el-container>
   </el-container>
 </template>
 <script>
-import "@/assets/styles/layout.css"
-import Header from "@/components/Header1";
+import "@/assets/styles/layout.css";
+import Header from "@/components/Header";
 import Aside from "@/components/Aside";
 export default {
   components: {
     Aside,
-    Header
+    Header,
   },
 };
 </script>

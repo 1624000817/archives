@@ -1,5 +1,4 @@
 <template>
-  <el-container>
     <el-header>
       <div class="headerLeft">
         <div class="headerLeftL">無錫檔案局</div>
@@ -23,8 +22,6 @@
         </div>
       </div>
     </el-header>
-    <router-view></router-view>
-  </el-container>
 </template>
 
 <script>
@@ -38,7 +35,4 @@ export default {
 };
 </script>
 
-<style type="text/css">
-@import url(../assets/styles/styles.css);
-</style>
 

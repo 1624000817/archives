@@ -1,59 +1,4 @@
 <template>
-  <el-container>
-    <el-aside>
-      <div class="menu">
-        <ul>
-          <li>
-            <div class="menuIcon">
-              <img src="../../../static/menu1.png" />
-            </div>
-            <div class="menuM">B端用户管理</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../../static/menu2.png" />
-            </div>
-            <div class="menuM">目录管理</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../../static/menu3.png" />
-            </div>
-            <div class="menuM">审批记录</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../../static/menu4.png" />
-            </div>
-            <div class="menuM">资源管理</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../../static/menu5.png" />
-            </div>
-            <div class="menuM">角色权限管理</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../../static/menu6.png" />
-            </div>
-            <div class="menuM">搜索记录</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../../static/menu7.png" />
-            </div>
-            <div class="menuM">系统日志</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../../static/menu8.png" />
-            </div>
-            <div class="menuM">C端用户管理</div>
-          </li>
-        </ul>
-      </div>
-    </el-aside>
     <el-main>
       <div class="con">
         <div class="conTop">
@@ -163,5 +108,159 @@
         </div>
       </div>
     </el-main> 
-  </el-container>
+
 </template>
+
+<style scoped>
+    .con {
+    width: 100%;
+    height: auto;
+}
+
+.conTop {
+    width: 100%;
+    height: 5.625rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    color: #666666;
+    border-bottom: 1px solid #cccccc;
+}
+
+.conTopL {
+    float: left;
+    width: auto;
+    height: 5.625rem;
+    padding-left: 2%;
+    line-height: 5.625rem;
+}
+
+.conTopR {
+    float: right;
+    width: 81%;
+    height: 5.625rem;
+    padding-right: 2%;
+}
+
+.conTopRDiv {
+    float: right;
+    width: auto;
+    height: 5.625rem;
+    margin-left: 3%;
+    line-height: 5.625rem;
+}
+
+.conTopRDivC {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.conBottom {
+    width: 100%;
+    height: auto;
+    padding-top: 1.25rem;
+}
+
+.conBottomTop {
+    width: 100%;
+    height: 6.25rem;
+    margin-bottom: 1.25rem;
+    background-color: #ffffff;
+    border-radius: 0.3125rem;
+}
+
+.conBottomTop li {
+    float: left;
+    width: 24.90%;
+    height: 3.75rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-left: 6%;
+    border-right: 1px solid #cccccc;
+}
+
+.conBottomTop :nth-child(4){
+    border-right: 0;
+}
+
+.conBottomTopImg {
+    float: left;
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-right: 10%;
+}
+
+.conBottomTopImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.conBottomTopDiv {
+    float: left;
+    width: auto;
+    height: 3.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+.conBottomTopDivTop {
+    width: auto;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    font-size: 1.125rem;
+}
+
+.conBottomTopDivBottom {
+    width: auto;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    font-size: 1.75rem;
+}
+
+.conBottomBottom {
+    width: 100%;
+    height: 21.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.3125rem;
+}
+
+.marginR {
+    margin-right: 0 !important;
+}
+
+.conBottomBottomDiv {
+    float: left;
+    width: 49.375%;
+    height: 100%;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+    margin-right: 1.25%;
+    background-color: #ffffff;
+    border-radius: 0.3125rem;
+}
+
+.conBottomBottomDivTop {
+    float: left;
+    width: 100%;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    padding-left: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    color: #333333;
+    border-bottom: 1px solid #cccccc;
+}
+
+.conBottomBottomDivBottom {
+    float: left;
+    width: 100%;
+    height: 17.5rem;
+}
+
+.conBottomBottomDivBottomImg {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+</style>
