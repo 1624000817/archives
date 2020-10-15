@@ -2,7 +2,7 @@
   <el-container>
     <el-header>
       <div class="headerLeft">
-        <div class="headerLeftL">无锡档案局</div>
+        <div class="headerLeftL">無錫檔案局</div>
         <div class="headerLeftR">2020-10-09 15:18:30 星期五</div>
       </div>
       <div class="headerRight">
@@ -39,6 +39,6 @@ export default {
 </script>
 
 <style type="text/css">
-@import url(../assets/styles.css);
+@import url(../assets/styles/styles.css);
 </style>
 

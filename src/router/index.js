@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Header from '@/components/Header'
+import Layout from '@/views/layout'
 import Home from '@/views/index/index'
 import Login from '@/views/login/login'
 
@@ -29,5 +30,6 @@ export default new Router({
       name: 'Login',
       component: Login
     }
+    
   ]
 })

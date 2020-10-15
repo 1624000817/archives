@@ -88,8 +88,8 @@ export default {
 
 <style scoped>
 .loginPage {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: url("../../assets/images/login/l_bg.jpg") no-repeat center;
     background-size: cover;
 }
