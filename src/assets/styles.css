@@ -1,0 +1,272 @@
+.el-header {
+    width: 100%;
+    padding: 0;
+    height: 6.25rem !important;
+    background-color: #ffffff;
+}
+
+.headerLeft {
+    float: left;
+    width: 28%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerLeftL {
+    float: left;
+    width: 46%;
+    height: 100%;
+    line-height: 6.25rem;
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+}
+
+.headerLeftR {
+    float: left;
+    width: 54%;
+    height: 100%;
+    line-height: 6.25rem;
+    font-size: 0.875rem;
+    color: #999999;
+    text-align: center;
+}
+
+.headerRight {
+    float: right;
+    width: 27%;
+    height: 100%;
+    margin-right: 3%;
+}
+
+.headerRight1 {
+    float: right;
+    width: 2.3125rem;
+    height: 2.3125rem;
+    margin-top: 1.9375rem;
+    margin-left: 10%;
+}
+
+.headerRight2 {
+    float: right;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 1.875rem;
+    margin-left: 10%;
+}
+
+.headerRightUser {
+    float: right;
+    width: 36%;
+    height: 100%;
+}
+
+.headerRightUserName {
+    float: right;
+    width: auto;
+    height: 100%;
+    margin-left: 1.875rem;
+    line-height: 6.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.headerRight3 {
+    float: right;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-top: 1.5625rem;
+}
+  
+.el-aside {
+    width: 14% !important;
+    height: 52.25rem;
+    padding-top: 1.5625rem;
+    padding-left: 1.6%;
+    background-color: #2e68ea;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+}
+
+.menu li {
+    width: 100%;
+    height: 5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.menuIcon {
+    float: left;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 11%;
+}
+
+.menuM {
+    float: left;
+    width: auto;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+  
+.el-main {
+    width: 86% !important;
+    height: 52.25rem;
+    padding-top: 0;
+    padding-bottom: 1.25rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    background-color: #ecebf8;
+}
+
+.con {
+    width: 100%;
+    height: auto;
+}
+
+.conTop {
+    width: 100%;
+    height: 5.625rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    color: #666666;
+    border-bottom: 1px solid #cccccc;
+}
+
+.conTopL {
+    float: left;
+    width: auto;
+    height: 5.625rem;
+    padding-left: 2%;
+    line-height: 5.625rem;
+}
+
+.conTopR {
+    float: right;
+    width: 81%;
+    height: 5.625rem;
+    padding-right: 2%;
+}
+
+.conTopRDiv {
+    float: right;
+    width: auto;
+    height: 5.625rem;
+    margin-left: 3%;
+    line-height: 5.625rem;
+}
+
+.conTopRDivC {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.conBottom {
+    width: 100%;
+    height: auto;
+    padding-top: 1.25rem;
+}
+
+.conBottomTop {
+    width: 100%;
+    height: 6.25rem;
+    margin-bottom: 1.25rem;
+    background-color: #ffffff;
+    border-radius: 0.3125rem;
+}
+
+.conBottomTop li {
+    float: left;
+    width: 24.90%;
+    height: 3.75rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-left: 6%;
+    border-right: 1px solid #cccccc;
+}
+
+.conBottomTop :nth-child(4){
+    border-right: 0;
+}
+
+.conBottomTopImg {
+    float: left;
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-right: 10%;
+}
+
+.conBottomTopDiv {
+    float: left;
+    width: auto;
+    height: 3.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+.conBottomTopDivTop {
+    width: auto;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    font-size: 1.125rem;
+}
+
+.conBottomTopDivBottom {
+    width: auto;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    font-size: 1.75rem;
+}
+
+.conBottomBottom {
+    width: 100%;
+    height: 21.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.3125rem;
+}
+
+.marginR {
+    margin-right: 0 !important;
+}
+
+.conBottomBottomDiv {
+    float: left;
+    width: 49.375%;
+    height: 100%;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+    margin-right: 1.25%;
+    background-color: #ffffff;
+    border-radius: 0.3125rem;
+}
+
+.conBottomBottomDivTop {
+    float: left;
+    width: 100%;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    padding-left: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    color: #333333;
+    border-bottom: 1px solid #cccccc;
+}
+
+.conBottomBottomDivBottom {
+    float: left;
+    width: 100%;
+    height: 17.5rem;
+}
+
+.conBottomBottomDivBottomImg {
+    width: 100%;
+    height: 100%;
+}
