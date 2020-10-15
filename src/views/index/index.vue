@@ -25,40 +25,13 @@
         <div class="conBottom">
           <div class="conBottomTop">
             <ul>
-              <li>
+              <li v-for="(item,index) in list" :key="index">
                 <div class="conBottomTopImg">
-                  <img src="../../../static/i3a.png" />
+                  <img :src="item.icon" >
                 </div>
                 <div class="conBottomTopDiv">
-                  <div class="conBottomTopDivTop">即存档案数</div>
-                  <div class="conBottomTopDivBottom">80000</div>
-                </div>
-              </li>
-              <li>
-                <div class="conBottomTopImg">
-                  <img src="../../../static/i3b.png" />
-                </div>
-                <div class="conBottomTopDiv">
-                  <div class="conBottomTopDivTop">系统访问量</div>
-                  <div class="conBottomTopDivBottom">10080</div>
-                </div>
-              </li>
-              <li>
-                <div class="conBottomTopImg">
-                  <img src="../../../static/i3c.png" />
-                </div>
-                <div class="conBottomTopDiv">
-                  <div class="conBottomTopDivTop">开放目录数</div>
-                  <div class="conBottomTopDivBottom">8000</div>
-                </div>
-              </li>
-              <li>
-                <div class="conBottomTopImg">
-                  <img src="../../../static/i3d.png" />
-                </div>
-                <div class="conBottomTopDiv">
-                  <div class="conBottomTopDivTop">系统访问量</div>
-                  <div class="conBottomTopDivBottom">8000</div>
+                  <div class="conBottomTopDivTop">{{item.name}}</div>
+                  <div class="conBottomTopDivBottom">{{item.num}}</div>
                 </div>
               </li>
             </ul>
@@ -68,7 +41,7 @@
               <div class="conBottomBottomDivTop">新增档案数（一周）</div>
               <div class="conBottomBottomDivBottom">
                 <img
-                  src="../../../static/conicon1.png"
+                  src="../../assets/images/index/conicon1.png"
                   class="conBottomBottomDivBottomImg"
                 />
               </div>
@@ -77,7 +50,7 @@
               <div class="conBottomBottomDivTop">档案点阅类别占比（一周）</div>
               <div class="conBottomBottomDivBottom">
                 <img
-                  src="../../../static/conicon2.png"
+                  src="../../assets/images/index/conicon2.png"
                   class="conBottomBottomDivBottomImg"
                 />
               </div>
@@ -90,7 +63,7 @@
               </div>
               <div class="conBottomBottomDivBottom">
                 <img
-                  src="../../../static/conicon3.png"
+                  src="../../assets/images/index/conicon3.png"
                   class="conBottomBottomDivBottomImg"
                 />
               </div>
@@ -99,7 +72,7 @@
               <div class="conBottomBottomDivTop">档案下载数（一周）</div>
               <div class="conBottomBottomDivBottom">
                 <img
-                  src="../../../static/conicon4.png"
+                  src="../../assets/images/index/conicon4.png"
                   class="conBottomBottomDivBottomImg"
                 />
               </div>
@@ -109,7 +82,40 @@
       </div>
     </el-main> 
 
+
+
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            list:[
+                {
+                    icon:require("@/assets/images/index/i3a.png"),
+                    name:"即存档案数",
+                    num:"80000"
+                },
+                {
+                    icon:require("@/assets/images/index/i3b.png"),
+                    name:"系统访问量",
+                    num:"10080"
+                },
+                {
+                    icon:require("@/assets/images/index/i3c.png"),
+                    name:"开放目录数",
+                    num:"8000"
+                },
+                {
+                    icon:require("@/assets/images/index/i3d.png"),
+                    name:"系统访问量",
+                    num:"8000"
+                }
+            ]
+        }
+    }
+}
+</script>
 
 <style scoped>
     .con {

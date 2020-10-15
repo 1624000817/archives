@@ -1,7 +1,10 @@
 <template>
   <div class="loginPage">
     <div class="loginConBox">
-        <div class="loginLogo">無錫檔案局</div>
+        <div class="loginLogo">
+            <img src="../../assets/images/login/logo.png" >
+            <!-- 無錫檔案局 -->
+        </div>
         <div class="loginFormBox">
         <div class="loginTitle">用户登录</div>
             <el-form
@@ -103,9 +106,8 @@ export default {
 }
 /* 250*60 */
 .loginLogo{
-    width: 15.625rem;
-    height: 3.75rem;
-    line-height: 3.75rem;
+    width: 10.9375rem;
+    height: 3.125rem;
     margin: 0 auto 5rem auto;
     font-size:2.1875rem;
     color: #ffffff;
@@ -151,12 +153,13 @@ export default {
 }
 .loginOperation{
     height: 1rem;
+    line-height: 1rem;
     margin-top: -0.25rem;
     margin-bottom: 2.25rem;
 }
 .loginRemember /deep/ .el-checkbox__inner{
-    width: 1rem;
-    height: 1rem;
+    width: 0.875rem;
+    height: 0.875rem;
     background-color: transparent;
     border-color:#00b8ff;
 }
@@ -167,18 +170,18 @@ export default {
 }
 .loginRemember /deep/ .el-checkbox__label{
     line-height: 1;
-    font-size:1rem;
+    font-size:0.75rem;
     color: #ffffff;
 }
 .loginForgetText{
     line-height: 1;
-    font-size:1rem;
+    font-size:0.75rem;
     color:#00b8ff;
 }
 .loginBtn{
     width: 100%;
     height: 3.5rem;
-    font-size: 1.625rem;
+    font-size: 1.125rem;
     background: linear-gradient( 90deg, rgb(0,96,255) 0%, rgb(0,150,255) 100%);
     border-radius: 0.375rem;
     border:0;
