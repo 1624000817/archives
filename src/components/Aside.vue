@@ -1,57 +1,75 @@
 <template>
-    <el-aside>
-      <div class="menu">
-        <ul>
-          <li>
-            <div class="menuIcon">
-              <img src="../../static/menu1.png" />
-            </div>
-            <div class="menuM">B端用户管理</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../static/menu2.png" />
-            </div>
-            <div class="menuM">目录管理</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../static/menu3.png" />
-            </div>
-            <div class="menuM">审批记录</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../static/menu4.png" />
-            </div>
-            <div class="menuM">资源管理</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../static/menu5.png" />
-            </div>
-            <div class="menuM">角色权限管理</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../static/menu6.png" />
-            </div>
-            <div class="menuM">搜索记录</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../static/menu7.png" />
-            </div>
-            <div class="menuM">系统日志</div>
-          </li>
-          <li>
-            <div class="menuIcon">
-              <img src="../../static/menu8.png" />
-            </div>
-            <div class="menuM">C端用户管理</div>
-          </li>
-        </ul>
-      </div>
-    </el-aside>
-
+  <el-aside>
+    <el-menu
+      default-active="2"
+      class="el-menu-vertical-demo"
+      @open="handleOpen"
+      @close="handleClose"
+      background-color="#2e68ea"
+      text-color="#ffffff"
+      active-text-color="#ffd04b"
+    >
+      <el-submenu index="1">
+        <template slot="title">
+          <div class="menuIcon usermenu">
+            <img src="../../static/menu1.png" />
+          </div>
+          <div class="menuM">用户管理</div>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="1-1" class="i">B端用户管理</el-menu-item>
+          <el-menu-item index="1-2" class="i">C端用户管理</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-menu-item index="2">
+        <div class="menuIcon">
+          <img src="../../static/menu2.png" />
+        </div>
+        <div class="menuM">目录管理</div>
+      </el-menu-item>
+      <el-menu-item index="3">
+        <div class="menuIcon">
+          <img src="../../static/menu3.png" />
+        </div>
+        <div class="menuM">审批记录</div>
+      </el-menu-item>
+      <el-menu-item index="4">
+        <div class="menuIcon">
+          <img src="../../static/menu4.png" />
+        </div>
+        <div class="menuM">资源管理</div>
+      </el-menu-item>
+      <el-menu-item index="5">
+        <div class="menuIcon">
+          <img src="../../static/menu5.png" />
+        </div>
+        <div class="menuM">角色权限管理</div>
+      </el-menu-item>
+      <el-menu-item index="6">
+        <div class="menuIcon">
+          <img src="../../static/menu6.png" />
+        </div>
+        <div class="menuM">搜索记录</div>
+      </el-menu-item>
+      <el-menu-item index="7">
+        <div class="menuIcon">
+          <img src="../../static/menu7.png" />
+        </div>
+        <div class="menuM">系统日志</div>
+      </el-menu-item>
+    </el-menu>
+  </el-aside>
 </template>
+
+<script>
+export default {
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
+    },
+  },
+};
+</script>
