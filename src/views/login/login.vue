@@ -107,7 +107,7 @@ export default {
     height: 3.75rem;
     line-height: 3.75rem;
     margin: 0 auto 5rem auto;
-    font-size: 3.125rem;
+    font-size:2.1875rem;
     color: #ffffff;
 }
 .loginFormBox {
@@ -122,7 +122,7 @@ export default {
     height: 2.8125rem;
     line-height: 2.8125rem;
     margin-bottom: 3.125rem;
-    font-size: 2.375rem;
+    font-size: 1.625rem;
     color: #ffffff;
     text-align: center;
 }
@@ -134,7 +134,7 @@ export default {
     height: 3.5rem;
     line-height: 3.5rem;
     padding-left: 3.5rem;
-    font-size: 1.25rem;
+    font-size: 0.875rem;
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.102);
     border-radius: 0.375rem;

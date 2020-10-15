@@ -6,12 +6,13 @@
   </el-container>
 </template>
 <script>
-import Header from "@/components/Header";
+import "@/assets/styles/layout.css"
+import Header from "@/components/Header1";
 import Aside from "@/components/Aside";
 export default {
   components: {
-    Header,
     Aside,
+    Header
   },
 };
 </script>

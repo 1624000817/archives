@@ -1,0 +1,131 @@
+.el-header {
+    width: 100%;
+    padding: 0;
+    height: 6.25rem !important;
+    background-color: #ffffff;
+}
+
+.headerLeft {
+    float: left;
+    width: 28%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerLeftL {
+    float: left;
+    width: 46%;
+    height: 100%;
+    line-height: 6.25rem;
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+}
+
+.headerLeftR {
+    float: left;
+    width: 54%;
+    height: 100%;
+    line-height: 6.25rem;
+    font-size: 0.875rem;
+    color: #999999;
+    text-align: center;
+}
+
+.headerRight {
+    float: right;
+    width: 27%;
+    height: 100%;
+    margin-right: 3%;
+}
+
+.headerRight1 {
+    float: right;
+    width: 2.3125rem;
+    height: 2.3125rem;
+    margin-top: 1.9375rem;
+    margin-left: 10%;
+}
+
+.headerRight2 {
+    float: right;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 1.875rem;
+    margin-left: 10%;
+}
+
+.headerRightUser {
+    float: right;
+    width: 36%;
+    height: 100%;
+}
+
+.headerRightUserName {
+    float: right;
+    width: auto;
+    height: 100%;
+    margin-left: 1.875rem;
+    line-height: 6.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.headerRight3 {
+    float: right;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-top: 1.5625rem;
+}
+.el-container {
+    height: calc(100vh - 6.25rem);
+ }
+.el-aside {
+    width: 14% !important;
+    height: 100%;
+    padding-top: 1.5625rem;
+    padding-left: 1.6%;
+    background-color: #2e68ea;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+}
+
+.menu li {
+    width: 100%;
+    height: 5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.menuIcon {
+    float: left;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 11%;
+}
+
+.menuM {
+    float: left;
+    width: auto;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+  
+.el-main {
+    width: 86% !important;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 1.25rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    background-color: #ecebf8;
+}
