@@ -1,5 +1,5 @@
 <template>
-  <el-container direction="vertical">
+  <el-container class="layoutBox" direction="vertical">
     <Header></Header>
     <el-container>
       <Aside></Aside>

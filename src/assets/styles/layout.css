@@ -1,3 +1,6 @@
+.layoutBox{
+    height: 100vh !important;
+}
 .el-header {
     position: relative;
     width: 100%;
@@ -119,6 +122,9 @@
     height: 100%;
     padding-top: 1.5625rem;
     background-color: #2e68ea;
+}
+.el-menu {
+    border-right: 0 !important;
 }
 
 .menu {

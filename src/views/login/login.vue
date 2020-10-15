@@ -28,7 +28,6 @@
                     <router-link to="" class="loginForgetText">忘记密码？</router-link>
                 </div>
                 <el-button type="primary" class="loginBtn" @click="submitForm('ruleForm')" >登&nbsp;录</el-button>
-                <i class="el-icon-ice-cream-round" @click="fullScreen"></i>
             </el-form>
         </div>
     </div>
@@ -62,28 +61,6 @@ export default {
           return false;
         }
       });
-    },
-    fullScreen(){
-      let element = document.documentElement;
-      if (this.fullscreen) {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.webkitCancelFullScreen) {
-            document.webkitCancelFullScreen();
-        }else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-        }
-      } else {
-        if(element.requestFullscreen) {
-            element.requestFullscreen();
-        } else if (element.webkitRequestFullScreen) {
-            element.webkitRequestFullScreen();
-        } else if (element.msRequestFullscreen) {
-            // IE11
-            element.msRequestFullscreen();
-        }
-      }
-      this.fullscreen = !this.fullscreen;
     }
   }
 };
@@ -104,7 +81,6 @@ export default {
     width: 31.1875rem;
     height: auto;
 }
-/* 250*60 */
 .loginLogo{
     width: 10.9375rem;
     height: 3.125rem;
