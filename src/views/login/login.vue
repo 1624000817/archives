@@ -2,8 +2,7 @@
   <div class="loginPage">
     <div class="loginConBox">
         <div class="loginLogo">
-            <img src="../../assets/images/login/logo.png" >
-            <!-- 無錫檔案局 -->
+            无锡市档案史志馆
         </div>
         <div class="loginFormBox">
         <div class="loginTitle">用户登录</div>
@@ -82,11 +81,12 @@ export default {
     height: auto;
 }
 .loginLogo{
-    width: 10.9375rem;
+    width: 100%;
     height: 3.125rem;
     margin: 0 auto 5rem auto;
     font-size:2.1875rem;
     color: #ffffff;
+    text-align: center;
 }
 .loginFormBox {
     width: 31.1875rem;
