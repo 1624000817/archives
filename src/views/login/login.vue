@@ -82,7 +82,7 @@ export default {
 }
 .loginLogo{
     width: 100%;
-    height: 3.125rem;
+    height:auto;
     margin: 0 auto 5rem auto;
     font-size:2.1875rem;
     color: #ffffff;
