@@ -61,6 +61,7 @@
             height="100%"
             border
             style="width: 100%"
+            @selection-change="handleSelectionChange"
           >
             <el-table-column type="selection" width="50"></el-table-column>
             <el-table-column
@@ -364,6 +365,9 @@ export default {
     },
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`);
+    },
+    handleSelectionChange(selection) {
+      console.log("selection", selection);
     },
   },
   mounted() {

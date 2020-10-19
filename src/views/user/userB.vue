@@ -78,8 +78,8 @@ export default {
       form: {
         input: "",
         pageList: {
-          pageSize: 100,
-          current: 5,
+          pageSize: 10,
+          current: 1,
         },
       },
       tableData: [
@@ -159,17 +159,8 @@ export default {
     };
   },
   methods: {
-    toggleSelection(rows) {
-      if (rows) {
-        rows.forEach((row) => {
-          this.$refs.multipleTable.toggleRowSelection(row);
-        });
-      } else {
-        this.$refs.multipleTable.clearSelection();
-      }
-    },
-    handleSelectionChange(val) {
-      this.multipleSelection = val;
+    handleSelectionChange(selection) {
+     console.log("selection", selection);
     },
     onSubmit() {
       console.log("submit!");
@@ -181,6 +172,9 @@ export default {
       console.log(`当前页: ${val}`);
     },
   },
+  mounted(){
+      this.total = this.tableData.length || 0;
+  }
 };
 </script>
 
