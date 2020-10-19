@@ -20,12 +20,21 @@
       </el-upload>
     </div>
     <div class="resourceCBottom">
-      <div class="resourceTree">树状图</div>
+      <div class="resourceTree">
+          <!-- show-checkbox -->
+        <el-tree
+          :data="treeData"
+          default-expand-all
+          node-key="id"
+          :props="defaultProps"
+        >
+        </el-tree>
+      </div>
       <div class="resourceDetail flex flexColumn">
         <div class="resourceSearch">
-          <el-form :inline="true" :model="formInline" class="demo-form-inline">
+          <el-form :inline="true" :model="form" class="demo-form-inline">
             <el-form-item label="档案类别">
-              <el-select v-model="formInline.type" placeholder="请选择">
+              <el-select v-model="form.type" placeholder="请选择">
                 <el-option label="类别一" value="type1"></el-option>
                 <el-option label="类别二" value="type2"></el-option>
               </el-select>
@@ -34,7 +43,7 @@
               <el-date-picker
                 type="date"
                 placeholder="选择日期"
-                v-model="formInline.date"
+                v-model="form.date"
                 style="width: 100%"
               ></el-date-picker>
             </el-form-item>
@@ -47,16 +56,49 @@
           </el-form>
         </div>
         <div class="resourceTableBox flex flexColumn">
-          <div class="resourceTable flex">表格</div>
+          <!-- <div class="resourceTable flex"> -->
+          <el-table
+            :data="tableData"
+            class="resourceTable flex"
+            size="small"
+            height="100%"
+            border
+            style="width: 100%"
+          >
+            <el-table-column type="selection" width="50"></el-table-column>
+            <el-table-column
+              prop="no"
+              label="档案编号"
+              min-width="180"
+            ></el-table-column>
+            <el-table-column
+              prop="name"
+              label="档案名"
+              min-width="180"
+            ></el-table-column>
+            <el-table-column
+              prop="type"
+              label="档案类型"
+              min-width="180"
+            ></el-table-column>
+            <el-table-column
+              prop="uploadName"
+              label="上传人"
+              min-width="180"
+            ></el-table-column>
+            <el-table-column prop="date" label="上传时间" min-width="200">
+            </el-table-column>
+          </el-table>
+          <!-- </div> -->
 
           <el-pagination
             class="resourcePage"
             background
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
-            :current-page="formInline.pageList.current"
+            :current-page="form.pageList.current"
             :page-sizes="[10, 20, 30, 40]"
-            :page-size="formInline.pageList.pageSize"
+            :page-size="form.pageList.pageSize"
             layout="prev, pager, next,  sizes, total,  jumper"
             :total="total"
           >
@@ -70,97 +112,307 @@
 export default {
   data() {
     return {
-        total:50,
-        formInline: {
-            date: "",
-            type: "",
-            pageList:{
-                pageSize:10,
-                current:1
-            }
+      total: 0,
+      form: {
+        date: "",
+        type: "",
+        pageList: {
+          pageSize: 10,
+          current: 1,
         },
-        fileList: [
+      },
+      treeData: [
+        {
+          id: 1,
+          label: "一级 1",
+          children: [
             {
-            name: "food.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 4,
+              label: "二级 1-1"
+            },
+          ],
+        },
+        {
+          id: 2,
+          label: "一级 2",
+          children: [
+            {
+              id: 5,
+              label: "二级 2-1",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 6,
+              label: "二级 2-2",
+            },
+          ],
+        },
+        {
+          id: 3,
+          label: "一级 3",
+          children: [
+            {
+              id: 7,
+              label: "二级 3-1",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 8,
+              label: "二级 3-2",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 9,
+              label: "二级 3-3",
+            },
+          ],
+        },
+        {
+          id: 4,
+          label: "一级 4",
+          children: [
+            {
+              id: 10,
+              label: "二级 4-1",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 11,
+              label: "二级 4-2",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 12,
+              label: "二级 4-3",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 13,
+              label: "二级 4-4",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 14,
+              label: "二级 4-5",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 15,
+              label: "二级 4-6",
+            },
+          ],
+        },
+        {
+          id: 5,
+          label: "一级 5",
+          children: [
+            {
+              id: 16,
+              label: "二级 5-1",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 17,
+              label: "二级 5-2",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 18,
+              label: "二级 5-3",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 19,
+              label: "二级 5-4",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 20,
+              label: "二级 5-5",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 21,
+              label: "二级 5-6",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 22,
+              label: "二级 5-7",
             },
             {
-            name: "food2.jpeg",
-            url:
-                "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+              id: 23,
+              label: "二级 5-8",
             },
-        ],
+          ],
+        },
+        
+      ],
+      defaultProps: {
+        children: "children",
+        label: "label",
+      },
+      tableData: [
+        {
+          no: "BH0001",
+          name: "档案1",
+          type: "类型1",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0002",
+          name: "档案2",
+          type: "类型2",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0003",
+          name: "档案3",
+          type: "类型3",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0004",
+          name: "档案4",
+          type: "类型4",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0005",
+          name: "档案5",
+          type: "类型5",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0006",
+          name: "档案6",
+          type: "类型6",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0007",
+          name: "档案7",
+          type: "类型7",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0008",
+          name: "档案8",
+          type: "类型8",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0009",
+          name: "档案9",
+          type: "类型9",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0010",
+          name: "档案10",
+          type: "类型10",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0011",
+          name: "档案11",
+          type: "类型11",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0012",
+          name: "档案12",
+          type: "类型12",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+        {
+          no: "BH0013",
+          name: "档案13",
+          type: "类型13",
+          uploadName: "王小虎",
+          date: "2016-05-03",
+        },
+      ],
+      fileList: [
+        {
+          name: "food.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+        {
+          name: "food2.jpeg",
+          url:
+            "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
+        },
+      ],
     };
   },
   methods: {
@@ -193,15 +445,19 @@ export default {
       console.log(`当前页: ${val}`);
     },
   },
+  mounted() {
+    this.total = this.tableData.length || 0;
+  },
 };
 </script>
 
 <style scoped>
 .resourceBox {
-  height: 100%;
+  height: calc(100% - 5.625rem);
+  overflow: hidden;
 }
 .resourceClassify {
-  margin-bottom: 1.875rem
+  margin-bottom: 1.875rem;
 }
 .resourceClassifyTitle {
   width: 100%;
@@ -241,25 +497,23 @@ export default {
 .resourceCBottom {
   flex: 1;
   display: flex;
+  overflow: hidden;
 }
 .resourceTree {
   width: 15rem;
   height: auto;
+  padding: 0.625rem 0;
   margin-right: 1.875rem;
   background-color: #ffffff;
   border: 1px solid #41719c;
+  overflow: auto;
 }
-/* .resourceDetail{
-    flex: 1;
+
+.resourceTable /deep/ .el-table__body-wrapper {
+  height: calc(100% - 40px) !important;
 }
-.resourceTableBox{
-    flex: 1;
-}
- */
- .resourceTable{
-    background-color: #ffffff;
-}
-.resourcePage{
-    margin-top: 1.25rem;
+
+.resourcePage {
+  margin-top: 1.25rem;
 }
 </style>

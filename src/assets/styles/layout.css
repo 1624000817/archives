@@ -203,3 +203,41 @@
     padding-right: 1.875rem !important;
     background-color: #ecebf8;
 }
+
+
+.conTop {
+    width: 100%;
+    height: 5.625rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    color: #666666;
+    border-bottom: 1px solid #cccccc;
+  }
+  
+  .conTopL {
+    float: left;
+    width: auto;
+    height: 5.625rem;
+    padding-left: 2%;
+    line-height: 5.625rem;
+  }
+  
+  .conTopR {
+    float: right;
+    width: 81%;
+    height: 5.625rem;
+    padding-right: 2%;
+  }
+  
+  .conTopRDiv {
+    float: right;
+    width: auto;
+    height: 5.625rem;
+    margin-left: 3%;
+    line-height: 5.625rem;
+  }
+  
+  .conTopRDivC {
+    font-size: 1.125rem;
+    font-weight: bold;
+  }

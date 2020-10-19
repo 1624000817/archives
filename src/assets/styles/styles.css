@@ -18,9 +18,10 @@
   #app{
     height: 100vh;
   }
-  
+
 .flex{
     flex: 1;
+    overflow: hidden;
 }
   /* 两端对齐 */
   .flexBetween{
@@ -40,3 +41,7 @@
     align-items: flex-start;
 }
 
+/* 表格复选框居中 */
+.el-table-column--selection .cell{
+    text-align: center;
+}

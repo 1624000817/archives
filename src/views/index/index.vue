@@ -1,6 +1,6 @@
 <template>
   <div class="con">
-    <div class="conTop">
+    <!-- <div class="conTop">
       <div class="conTopL">首页</div>
       <div class="conTopR">
         <div class="conTopRDiv">
@@ -20,7 +20,7 @@
           <font class="conTopRDivC">张三</font>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="conBottom">
       <div class="conBottomTop">
         <ul>

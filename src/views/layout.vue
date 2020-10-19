@@ -4,7 +4,28 @@
     <el-container>
       <Aside></Aside>
       <el-main>
-      <router-view></router-view>
+        <div class="conTop">
+            <div class="conTopL">首页</div>
+            <div class="conTopR">
+                <div class="conTopRDiv">
+                登录ip：
+                <font class="conTopRDivC">100.0.0.0</font>
+                </div>
+                <div class="conTopRDiv">
+                登录地点：
+                <font class="conTopRDivC">无锡新区</font>
+                </div>
+                <div class="conTopRDiv">
+                登录时间：
+                <font class="conTopRDivC">2020-10-09 15:18:30 星期五</font>
+                </div>
+                <div class="conTopRDiv">
+                登录者：
+                <font class="conTopRDivC">张三</font>
+                </div>
+            </div>
+        </div>
+        <router-view></router-view>
       </el-main>
     </el-container>
   </el-container>

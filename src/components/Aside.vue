@@ -1,11 +1,12 @@
 <template>
   <el-aside>
     <el-menu
-      router="true"
+      :router="true"
       default-active="2"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
+      @select="handleSelect"
       background-color="#2e68ea"
       text-color="#ffffff"
       active-text-color="#ffd04b"
@@ -34,7 +35,7 @@
         </div>
         <div class="menuM">审批记录</div>
       </el-menu-item>
-      <el-menu-item index="4">
+      <el-menu-item index="resource">
         <div class="menuIcon">
           <img src="../assets/images/layout/menu4.png" />
         </div>
@@ -64,12 +65,41 @@
 
 <script>
 export default {
+  data() {
+    return {
+      menu: [
+        {
+          id: "1",
+          icon: require("@/assets/images/layout/menu1.png"),
+          name: "用户管理",
+          path: "/",
+          child: [
+            {
+              id: "1-1",
+              name: "B端用户管理",
+              path: "/userB",
+            },
+          ],
+        },
+        {
+          id: "2",
+          icon: require("@/assets/images/layout/menu2.png"),
+          name: "目录管理",
+          path: "/",
+        },
+      ],
+    };
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    handleSelect(index, indexPath) {
+      console.log("index", index);
+      console.log("indexPath", indexPath);
     },
   },
 };

@@ -4,8 +4,7 @@
       <img :src="fullscreen ? icon2 : icon1" @click="fullScreen" />
     </div>
     <div class="headerLeft">
-      <div class="headerLeftL">无锡市档案史志馆</div>
-      <div class="headerLeftR">2020-10-09 15:18:30 星期五</div>
+      <router-link to="/" class="headerLeftL">无锡市档案史志馆</router-link>
     </div>
     <div class="headerRight">
       <div class="headerRight1">
