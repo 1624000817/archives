@@ -23,16 +23,25 @@ export default new Router({
           path: 'home',
           name: 'Home',
           component: Home,
+          meta:{
+            name:'首页'
+          }
         },
         {
           path: 'userB',
           name: 'UserB',
           component: UserB,
+          meta:{
+            name:'B端用户管理'
+          }
         },
         {
           path: 'resource',
           name: 'Resource',
           component: Resource,
+          meta:{
+            name:'资源管理'
+          }
         }
       ]
     },

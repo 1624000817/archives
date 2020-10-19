@@ -2,63 +2,32 @@
   <el-aside>
     <el-menu
       :router="true"
-      default-active="2"
+      :default-active="$route.path"
       class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
       @select="handleSelect"
       background-color="#2e68ea"
       text-color="#ffffff"
       active-text-color="#ffd04b"
     >
-      <el-submenu index="1">
-        <template slot="title">
-          <div class="menuIcon usermenu">
-            <img src="../assets/images/layout/menu1.png" />
-          </div>
-          <div class="menuM">用户管理</div>
-        </template>
-        <el-menu-item-group>
-          <el-menu-item index="userB" class="i">B端用户管理</el-menu-item>
-          <el-menu-item index="1-2" class="i">C端用户管理</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-      <el-menu-item index="2">
+      <template v-for="item in menu">
+        <el-submenu :index="item.path" :key="item.id" v-if="item.child">
+          <template slot="title">
+            <div class="menuIcon usermenu">
+              <img :src="item.icon" />
+            </div>
+            <div class="menuM">{{item.name}}</div>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item v-for="items in item.child" :key="items.id" :index="items.path" class="i">{{items.name}}</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+        <el-menu-item :index="item.path" :key="item.id" v-else>
         <div class="menuIcon">
-          <img src="../assets/images/layout/menu2.png" />
+          <img :src="item.icon" />
         </div>
-        <div class="menuM">目录管理</div>
+        <div class="menuM">{{item.name}}</div>
       </el-menu-item>
-      <el-menu-item index="3">
-        <div class="menuIcon">
-          <img src="../assets/images/layout/menu3.png" />
-        </div>
-        <div class="menuM">审批记录</div>
-      </el-menu-item>
-      <el-menu-item index="resource">
-        <div class="menuIcon">
-          <img src="../assets/images/layout/menu4.png" />
-        </div>
-        <div class="menuM">资源管理</div>
-      </el-menu-item>
-      <el-menu-item index="5">
-        <div class="menuIcon">
-          <img src="../assets/images/layout/menu5.png" />
-        </div>
-        <div class="menuM">角色权限管理</div>
-      </el-menu-item>
-      <el-menu-item index="6">
-        <div class="menuIcon">
-          <img src="../assets/images/layout/menu6.png" />
-        </div>
-        <div class="menuM">搜索记录</div>
-      </el-menu-item>
-      <el-menu-item index="7">
-        <div class="menuIcon">
-          <img src="../assets/images/layout/menu7.png" />
-        </div>
-        <div class="menuM">系统日志</div>
-      </el-menu-item>
+      </template>
     </el-menu>
   </el-aside>
 </template>
@@ -79,24 +48,53 @@ export default {
               name: "B端用户管理",
               path: "/userB",
             },
+            {
+              id: "1-2",
+              name: "C端用户管理",
+              path: "userC",
+            },
           ],
         },
         {
           id: "2",
           icon: require("@/assets/images/layout/menu2.png"),
           name: "目录管理",
-          path: "/",
+          path: "/1",
+        },
+        {
+          id: "3",
+          icon: require("@/assets/images/layout/menu3.png"),
+          name: "审批记录",
+          path: "/2",
+        },
+        {
+          id: "4",
+          icon: require("@/assets/images/layout/menu4.png"),
+          name: "资源管理",
+          path: "/resource",
+        },
+        {
+          id: "5",
+          icon: require("@/assets/images/layout/menu5.png"),
+          name: "角色权限管理",
+          path: "/3",
+        },
+        {
+          id: "6",
+          icon: require("@/assets/images/layout/menu6.png"),
+          name: "搜索记录",
+          path: "/4",
+        },
+        {
+          id: "7",
+          icon: require("@/assets/images/layout/menu7.png"),
+          name: "系统日志",
+          path: "/5",
         },
       ],
     };
   },
   methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath);
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath);
-    },
     handleSelect(index, indexPath) {
       console.log("index", index);
       console.log("indexPath", indexPath);

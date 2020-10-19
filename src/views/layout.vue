@@ -5,7 +5,7 @@
       <Aside></Aside>
       <el-main>
         <div class="conTop">
-            <div class="conTopL">首页</div>
+            <div class="conTopL">{{$route.meta.name}}</div>
             <div class="conTopR">
                 <div class="conTopRDiv">
                 登录ip：
@@ -38,6 +38,6 @@ export default {
   components: {
     Aside,
     Header,
-  },
+  }
 };
 </script>
