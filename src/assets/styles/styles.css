@@ -18,9 +18,25 @@
   #app{
     height: 100vh;
   }
+  
+.flex{
+    flex: 1;
+}
   /* 两端对齐 */
   .flexBetween{
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  /* 垂直排列 */
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+  /* 行反向对齐 */
+.flexRowReverse{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
