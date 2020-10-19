@@ -1,6 +1,7 @@
 <template>
   <el-aside>
     <el-menu
+      router="true"
       default-active="2"
       class="el-menu-vertical-demo"
       @open="handleOpen"
@@ -17,7 +18,7 @@
           <div class="menuM">用户管理</div>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1" class="i">B端用户管理</el-menu-item>
+          <el-menu-item index="userB" class="i">B端用户管理</el-menu-item>
           <el-menu-item index="1-2" class="i">C端用户管理</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
