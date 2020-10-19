@@ -21,7 +21,7 @@
     </div>
     <div class="resourceCBottom">
       <div class="resourceTree">
-          <!-- show-checkbox -->
+        <!-- show-checkbox -->
         <el-tree
           :data="treeData"
           default-expand-all
@@ -128,7 +128,7 @@ export default {
           children: [
             {
               id: 4,
-              label: "二级 1-1"
+              label: "二级 1-1",
             },
           ],
         },
@@ -232,7 +232,6 @@ export default {
             },
           ],
         },
-        
       ],
       defaultProps: {
         children: "children",

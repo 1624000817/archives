@@ -1,13 +1,9 @@
 <template>
   <div class="userB flexColumn">
     <div class="userBNew">
-      <el-form :inline="true" :model="input" class="demo-form-inline">
+      <el-form :inline="true" :model="form" class="demo-form-inline">
         <el-form-item>
-          <el-input
-            v-model="input"
-            placeholder="用户编号"
-            class="userBNewInput"
-          ></el-input>
+          <el-input v-model="form.input" placeholder="用户编号"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" size="small" @click="onSubmit"
@@ -61,12 +57,12 @@
       <el-pagination
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
-        :current-page="currentPage1"
+        :current-page="form.pageList.current"
         :page-sizes="[10, 20, 30, 40]"
-        :page-size="100"
+        :page-size="form.pageList.pageSize"
         background
         layout="prev, pager, next,  sizes, total, jumper"
-        :total="1"
+        :total="total"
       >
       </el-pagination>
     </div>
@@ -77,7 +73,14 @@
 export default {
   data() {
     return {
-      input: "",
+      total: 0,
+      form: {
+        input: "",
+        pageList: {
+          pageSize: 100,
+          current: 5,
+        },
+      },
       tableData: [
         {
           id: "11111",
@@ -104,7 +107,6 @@ export default {
           time: "2020-05-26",
         },
       ],
-      currentPage1: 5,
     };
   },
   methods: {
@@ -136,7 +138,8 @@ export default {
 <style scoped>
 .userB {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 5.625rem);
+  overflow: hidden;
 }
 
 .userBNew {
