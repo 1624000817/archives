@@ -1,17 +1,28 @@
 <template>
-  <div class="userB">
+  <div class="userB flexColumn">
     <div class="userBNew">
-      <el-input
-        v-model="input"
-        placeholder="用户编号"
-        class="userBNewInput"
-      ></el-input>
-      <el-button type="primary" class="userBNewButtom">查询</el-button>
-      <el-button type="primary" class="userBNewButtom3">批量删除</el-button>
-      <el-button type="primary" class="userBNewButtom2">新增用户</el-button>
+      <el-form :inline="true" :model="input" class="demo-form-inline">
+        <el-form-item>
+          <el-input
+            v-model="input"
+            placeholder="用户编号"
+            class="userBNewInput"
+          ></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" size="small" @click="onSubmit"
+            >查询</el-button
+          >
+        </el-form-item>
+        <el-form-item style="float: right">
+          <el-button type="primary" size="small">批量删除</el-button>
+          <el-button type="primary" size="small">新增用户</el-button>
+        </el-form-item>
+      </el-form>
     </div>
-    <div class="userBTable">
+    <div class="userBTable flex flexColumn">
       <el-table
+        class="flex"
         ref="multipleTable"
         :data="tableData"
         border
@@ -30,9 +41,21 @@
         <el-table-column prop="time" label="注册时间" width="250">
         </el-table-column>
         <el-table-column prop="cz" label="操作" show-overflow-tooltip>
-          <el-button type="primary" icon="el-icon-edit"></el-button>
-          <el-button type="danger" icon="el-icon-delete"></el-button>
-          <el-button type="info" icon="el-icon-message"></el-button>
+          <el-button
+            type="primary"
+            icon="el-icon-edit"
+            size="small"
+          ></el-button>
+          <el-button
+            type="danger"
+            icon="el-icon-delete"
+            size="small"
+          ></el-button>
+          <el-button
+            type="info"
+            icon="el-icon-setting"
+            size="small"
+          ></el-button>
         </el-table-column>
       </el-table>
       <el-pagination
@@ -97,6 +120,9 @@ export default {
     handleSelectionChange(val) {
       this.multipleSelection = val;
     },
+    onSubmit() {
+      console.log("submit!");
+    },
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`);
     },
@@ -110,47 +136,20 @@ export default {
 <style scoped>
 .userB {
   width: 100%;
-  height: auto;
-  padding-top: 1.875rem;
+  height: 100%;
 }
 
 .userBNew {
   width: 100%;
-  height: 4.375rem;
-  padding-bottom: 1.875rem;
-}
-
-.userBNewInput {
-  float: left;
-  width: auto;
-  margin-right: 0.625rem;
-}
-
-.userBNewButtom {
-  float: left;
-}
-
-.userBNewButtom2 {
-  float: right;
-}
-
-.userBNewButtom3 {
-  float: right;
-  margin-left: 1px !important;
+  padding-top: 1.875rem;
 }
 
 .userBTable {
-  width: 100%;
-  height: auto;
+  flex: 1;
+  display: flex;
 }
 
 .el-pagination {
-  padding: 0.3125rem 0.3125rem !important;
-}
-
-.el-pagination.is-background .btn-next,
-.el-pagination.is-background .btn-prev,
-.el-pagination.is-background .el-pager li {
-  background-color: #409eff !important;
+  margin-top: 1.25rem;
 }
 </style>
