@@ -21,6 +21,7 @@
         class="flex"
         ref="multipleTable"
         :data="tableData"
+        height="100%"
         border
         tooltip-effect="dark"
         style="width: 100%"
@@ -90,6 +91,54 @@ export default {
         },
         {
           id: "11112",
+          address: "hello",
+          name: "小猪配齐",
+          time: "2020-05-26",
+        },
+        {
+          id: "1111",
+          address: "hello",
+          name: "小猪配齐",
+          time: "2020-05-26",
+        },
+        {
+          id: "1111",
+          address: "hello",
+          name: "小猪配齐",
+          time: "2020-05-26",
+        },
+        {
+          id: "1111",
+          address: "hello",
+          name: "小猪配齐",
+          time: "2020-05-26",
+        },
+        {
+          id: "1111",
+          address: "hello",
+          name: "小猪配齐",
+          time: "2020-05-26",
+        },
+        {
+          id: "1111",
+          address: "hello",
+          name: "小猪配齐",
+          time: "2020-05-26",
+        },
+        {
+          id: "1111",
+          address: "hello",
+          name: "小猪配齐",
+          time: "2020-05-26",
+        },
+        {
+          id: "1111",
+          address: "hello",
+          name: "小猪配齐",
+          time: "2020-05-26",
+        },
+        {
+          id: "1111",
           address: "hello",
           name: "小猪配齐",
           time: "2020-05-26",
