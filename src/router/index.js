@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Header from '@/components/Header'
 import Layout from '@/views/layout'
 import Home from '@/views/index/index'
 import Login from '@/views/login/login'
+import UserB from '@/views/user/userB'
+import Resource from '@/views/resource/Index'
 
 
 Vue.use(Router)
@@ -12,11 +13,6 @@ Vue.use(Router)
 export default new Router({
   mode: "history",
   routes: [
-    {
-      path: '/login',
-      name: 'Login',
-      component: Login
-    },
     {
       path: '/',
       name: 'Layout',
@@ -27,8 +23,23 @@ export default new Router({
           path: 'home',
           name: 'Home',
           component: Home,
+        },
+        {
+          path: 'userB',
+          name: 'UserB',
+          component: UserB,
+        },
+        {
+          path: 'resource',
+          name: 'Resource',
+          component: Resource,
         }
       ]
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
   ]
 })
