@@ -30,7 +30,7 @@
         style="width: 100%"
         @selection-change="handleSelectionChange"
       >
-        <el-table-column type="selection" width="55"> </el-table-column>
+        <el-table-column type="selection" width="50"> </el-table-column>
         <el-table-column label="用户编号" width="250">
           <template slot-scope="scope">{{ scope.row.id }}</template>
         </el-table-column>

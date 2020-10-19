@@ -60,7 +60,6 @@
           <el-table
             :data="tableData"
             class="resourceTable flex"
-            size="small"
             height="100%"
             border
             style="width: 100%"
@@ -510,7 +509,7 @@ export default {
 }
 
 .resourceTable /deep/ .el-table__body-wrapper {
-  height: calc(100% - 40px) !important;
+  height: calc(100% - 48px) !important;
 }
 
 .resourcePage {
