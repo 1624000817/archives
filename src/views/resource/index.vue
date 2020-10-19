@@ -19,13 +19,15 @@
     </div>
     <div class="resourceCBottom">
       <div class="resourceTree">
-        <el-tree
-          :data="treeData"
-          default-expand-all
-          node-key="id"
-          :props="defaultProps"
-        >
-        </el-tree>
+        <div class="resourceTreeScroll">
+          <el-tree
+            :data="treeData"
+            default-expand-all
+            node-key="id"
+            :props="defaultProps"
+          >
+          </el-tree>
+        </div>
       </div>
       <div class="resourceDetail flex flexColumn">
         <div class="resourceSearch">
@@ -107,7 +109,7 @@ export default {
   data() {
     return {
       total: 0,
-      limit:5,
+      limit: 5,
       form: {
         date: "",
         type: "",
@@ -123,7 +125,7 @@ export default {
           children: [
             {
               id: 4,
-              label: "二级 1-1"
+              label: "二级 1-1",
             },
           ],
         },
@@ -225,9 +227,12 @@ export default {
               id: 23,
               label: "二级 5-8",
             },
+            {
+              id: 24,
+              label: "二级 5-9",
+            },
           ],
         },
-        
       ],
       defaultProps: {
         children: "children",
@@ -336,7 +341,7 @@ export default {
           name: "food2.jpeg",
           url:
             "https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100",
-        }
+        },
       ],
     };
   },
@@ -347,9 +352,7 @@ export default {
     handleSuccess(res, file, fileList) {
       console.log(res, file, fileList);
     },
-    handleError(err,file,fileList){
-
-    },
+    handleError(err, file, fileList) {},
     beforeRemove(file, fileList) {
       return this.$confirm(`确定移除 ${file.name}？`);
     },
@@ -424,12 +427,15 @@ export default {
   margin-right: 1.875rem;
   background-color: #ffffff;
   border: 1px solid #41719c;
+}
+.resourceTreeScroll {
+  height: 100%;
   overflow: auto;
 }
 
-.resourceTable /deep/ .el-table__body-wrapper {
+/* .resourceTable /deep/ .el-table__body-wrapper {
   height: calc(100% - 48px) !important;
-}
+} */
 
 .resourcePage {
   margin-top: 1.25rem;
