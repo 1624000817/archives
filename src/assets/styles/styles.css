@@ -45,3 +45,8 @@
 .el-table-column--selection .cell{
     text-align: center;
 }
+
+.el-select{
+    width: 215px;
+}
+

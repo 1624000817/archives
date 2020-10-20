@@ -34,8 +34,13 @@
           <el-form :inline="true" :model="form" class="demo-form-inline">
             <el-form-item label="档案类别">
               <el-select v-model="form.type" placeholder="请选择">
-                <el-option label="类别一" value="type1"></el-option>
-                <el-option label="类别二" value="type2"></el-option>
+                <el-option
+                  v-for="item in options"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                >
+                </el-option>
               </el-select>
             </el-form-item>
             <el-form-item label="归档日期">
@@ -113,12 +118,34 @@ export default {
       limit: 5,
       form: {
         date: "",
-        type: "",
+        type: " ",
         pageList: {
           pageSize: 10,
           current: 1,
         },
       },
+      options: [
+        {
+          value: "type1",
+          label: "黄金糕",
+        },
+        {
+          value: "type2",
+          label: "双皮奶",
+        },
+        {
+          value: "type3",
+          label: "蚵仔煎",
+        },
+        {
+          value: "type4",
+          label: "龙须面",
+        },
+        {
+          value: "type5",
+          label: "北京烤鸭",
+        },
+      ],
       treeData: [
         {
           id: 1,
