@@ -9,7 +9,7 @@
             <!-- {{ $route.meta.name }} -->
             <el-breadcrumb separator-class="el-icon-arrow-right">
               <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-              <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+              <el-breadcrumb-item v-if="$route.path !='/' && $route.path !='/home'">{{ $route.meta.name }}</el-breadcrumb-item>
             </el-breadcrumb>
           </div>
           <div class="conTopR">

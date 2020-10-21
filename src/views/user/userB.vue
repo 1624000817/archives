@@ -1,5 +1,5 @@
 <template>
-  <div class="userB flexColumn">
+  <div class="userB flexColumn layoutContent">
     <div class="userBNew">
       <el-form :inline="true" :model="form" class="demo-form-inline">
         <el-form-item>
@@ -23,21 +23,22 @@
         :data="tableData"
         height="100%"
         border
+        stripe
         tooltip-effect="dark"
         style="width: 100%"
         @selection-change="handleSelectionChange"
       >
         <el-table-column type="selection" width="50"> </el-table-column>
-        <el-table-column label="用户编号" width="250">
+        <el-table-column label="用户编号" min-width="200">
           <template slot-scope="scope">{{ scope.row.id }}</template>
         </el-table-column>
-        <el-table-column prop="address" label="登录账号" width="350">
+        <el-table-column prop="address" label="登录账号" min-width="200">
         </el-table-column>
-        <el-table-column prop="name" label="用户昵称" width="350">
+        <el-table-column prop="name" label="用户昵称" min-width="200">
         </el-table-column>
-        <el-table-column prop="time" label="注册时间" width="350">
+        <el-table-column prop="time" label="注册时间" min-width="200">
         </el-table-column>
-        <el-table-column prop="cz" label="操作" show-overflow-tooltip>
+        <el-table-column prop="cz" label="操作" show-overflow-tooltip width="250" header-align="left" align="center">
           <el-button
             type="primary"
             icon="el-icon-edit"
@@ -56,6 +57,7 @@
         </el-table-column>
       </el-table>
       <el-pagination
+        class="archivesPage"
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page="form.pageList.current"
@@ -179,11 +181,6 @@ export default {
 </script>
 
 <style scoped>
-.userB {
-  width: 100%;
-  height: calc(100% - 5.625rem);
-  overflow: hidden;
-}
 
 .userBNew {
   width: 100%;
