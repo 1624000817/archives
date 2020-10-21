@@ -183,8 +183,9 @@ export default {
 
 .conBottomTopImg {
   float: left;
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-top: 0.3125rem;
   margin-right: 10%;
 }
 
@@ -196,23 +197,24 @@ export default {
 .conBottomTopDiv {
   float: left;
   width: auto;
-  height: 3.75rem;
+  height: 3.4375rem;
+  padding-top: 0.3125rem;
   font-family: Arial, Helvetica, sans-serif;
   color: #333333;
 }
 
 .conBottomTopDivTop {
   width: auto;
-  height: 1.875rem;
-  line-height: 1.875rem;
-  font-size: 1.125rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 1rem;
 }
 
 .conBottomTopDivBottom {
   width: auto;
   height: 1.875rem;
   line-height: 1.875rem;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .conBottomBottom {
@@ -230,8 +232,8 @@ export default {
   float: left;
   width: 49.375%;
   height: 100%;
-  padding-left: 3.125rem;
-  padding-right: 3.125rem;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
   margin-right: 1.25%;
   background-color: #ffffff;
   border-radius: 0.3125rem;
@@ -240,11 +242,12 @@ export default {
 .conBottomBottomDivTop {
   float: left;
   width: 100%;
-  height: 3.75rem;
-  line-height: 3.75rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
   padding-left: 1.25rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: #333333;
   border-bottom: 1px solid #cccccc;
 }
