@@ -41,17 +41,17 @@
           <el-button
             type="primary"
             icon="el-icon-edit"
-            size="small"
+            size="mini"
           ></el-button>
           <el-button
             type="danger"
             icon="el-icon-delete"
-            size="small"
+            size="mini"
           ></el-button>
           <el-button
             type="info"
             icon="el-icon-setting"
-            size="small"
+            size="mini"
           ></el-button>
         </el-table-column>
       </el-table>
@@ -194,7 +194,10 @@ export default {
   flex: 1;
   display: flex;
 }
-
+.userBTable /deep/ .el-table td{
+    height: 48px;
+    padding: 0;
+}
 .el-pagination {
   margin-top: 1.25rem;
 }

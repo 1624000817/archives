@@ -46,11 +46,25 @@
     text-align: center;
 }
 
-.el-form-item__content .el-select{
-    width: 215px;
-}
+
 
 .el-select-dropdown__wrap{
     margin-bottom: 0 !important;
     overflow: auto;
 }
+
+
+.el-input__inner{
+    width: 13.4375rem;
+}
+.el-form-item__content .el-select{
+    width: 13.4375rem;
+}
+
+/* 表头颜色 */
+.el-table th>.cell{
+    font-weight: bold;
+    color: #333333;
+}
+
+

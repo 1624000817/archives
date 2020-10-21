@@ -64,6 +64,7 @@
             :data="tableData"
             class="resourceTable flex"
             height="100%"
+            stripe
             border
             style="width: 100%"
             @selection-change="handleSelectionChange"
