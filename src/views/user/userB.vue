@@ -31,11 +31,11 @@
         <el-table-column label="用户编号" width="250">
           <template slot-scope="scope">{{ scope.row.id }}</template>
         </el-table-column>
-        <el-table-column prop="address" label="登录账号" width="250">
+        <el-table-column prop="address" label="登录账号" width="350">
         </el-table-column>
-        <el-table-column prop="name" label="用户昵称" width="250">
+        <el-table-column prop="name" label="用户昵称" width="350">
         </el-table-column>
-        <el-table-column prop="time" label="注册时间" width="250">
+        <el-table-column prop="time" label="注册时间" width="350">
         </el-table-column>
         <el-table-column prop="cz" label="操作" show-overflow-tooltip>
           <el-button
@@ -160,7 +160,7 @@ export default {
   },
   methods: {
     handleSelectionChange(selection) {
-     console.log("selection", selection);
+      console.log("selection", selection);
     },
     onSubmit() {
       console.log("submit!");
@@ -172,9 +172,9 @@ export default {
       console.log(`当前页: ${val}`);
     },
   },
-  mounted(){
-      this.total = this.tableData.length || 0;
-  }
+  mounted() {
+    this.total = this.tableData.length || 0;
+  },
 };
 </script>
 
