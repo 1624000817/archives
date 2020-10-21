@@ -46,7 +46,7 @@
     text-align: center;
 }
 
-.el-select{
+.el-form-item__content .el-select{
     width: 215px;
 }
 

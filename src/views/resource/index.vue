@@ -408,6 +408,7 @@ export default {
   height: calc(100% - 5.625rem);
   overflow: hidden;
 }
+
 .resourceClassify {
   margin-bottom: 1.875rem;
 }
@@ -423,10 +424,11 @@ export default {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 2rem;
-  line-height: 2rem;
+  min-height:2.5rem;
+  line-height: 2.5rem;
   background-color: #ffffff;
-  border: 1px solid #41719c;
+  border: 1px solid #409EFF;
+  border-radius: 0.25rem;
 }
 .resourceUpload /deep/ .el-upload-list__item {
   width: auto;
@@ -457,7 +459,8 @@ export default {
   padding: 0.625rem 0;
   margin-right: 1.875rem;
   background-color: #ffffff;
-  border: 1px solid #41719c;
+  border: 1px solid #409EFF;
+  border-radius: 0.375rem;
 }
 .resourceTreeScroll {
   height: 100%;
@@ -470,5 +473,9 @@ export default {
 
 .resourcePage {
   margin-top: 1.25rem;
+  padding-left: 0;
 }
+ .resourcePage /deep/ .btn-prev{
+     margin-left: 0;
+ }
 </style>
