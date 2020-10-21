@@ -76,3 +76,15 @@
 .archivesPage .btn-prev{
     margin-left: 0 !important;
 }
+
+.el-dialog{
+    width: 420px !important;
+    margin: 0 !important;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+
+}
+.el-dialog__body{
+    padding:1px 15px !important ;
+}

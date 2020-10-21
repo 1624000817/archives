@@ -5,9 +5,9 @@
       <el-upload
         class="resourceUpload flexRowReverse"
         action="https://jsonplaceholder.typicode.com/posts/"
-        :on-remove="handleRemove"
         :on-success="handleSuccess"
         :on-error="handleError"
+        :on-remove="handleRemove"
         :before-remove="beforeRemove"
         multiple
         :file-list="fileList"
@@ -109,14 +109,22 @@
         </div>
       </div>
     </div>
+    <el-dialog title="" top="0" :visible.sync="dialogVisible">
+      <span>确定移除{{uploadObj.name}}？</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button size="mini" @click="dialogVisible = false">取 消</el-button>
+        <el-button size="mini" type="primary" @click="onCofrim">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
+      dialogVisible: false,
+      uploadObj: {},
       total: 0,
-      limit: 5,
       form: {
         date: "",
         type: " ",
@@ -375,15 +383,26 @@ export default {
     };
   },
   methods: {
-    handleRemove(file, fileList) {
-      console.log(file, fileList);
-    },
     handleSuccess(res, file, fileList) {
-      console.log(res, file, fileList);
     },
     handleError(err, file, fileList) {},
+    handleRemove(file, fileList) {
+      console.log("file", file);
+      console.log("fileList", fileList);
+    },
+    onCofrim() {
+      this.fileList.map((item, index) => {
+        if (item.name == this.uploadObj.name) {
+          this.fileList.splice(index, 1);
+        }
+      });
+      this.dialogVisible = false;
+      this.handleRemove(this.uploadObj, this.fileList);
+    },
     beforeRemove(file, fileList) {
-      return this.$confirm(`确定移除 ${file.name}？`);
+      this.uploadObj = file;
+      this.dialogVisible = true;
+      return false;
     },
     onSubmit() {
       console.log("查找!");
@@ -405,7 +424,6 @@ export default {
 </script>
 
 <style scoped>
-
 .resourceClassify {
   margin-bottom: 1.875rem;
 }
@@ -421,23 +439,23 @@ export default {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  min-height:2.5rem;
+  min-height: 2.5rem;
   line-height: 2.5rem;
   background-color: #ffffff;
-  border: 1px solid #409EFF;
+  border: 1px solid #409eff;
   border-radius: 0.25rem;
 }
 .resourceUpload /deep/ .el-upload-list__item {
   width: auto;
-  height: 2rem;
-  line-height: 2rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   margin-top: 0;
 }
 .resourceUpload /deep/ .el-upload-list__item:hover {
   background-color: transparent;
 }
 .resourceUpload /deep/ .el-icon-close {
-  top: 0.625rem;
+  top:0.875rem;
 }
 .resourceUpload /deep/ .el-icon-close-tip {
   display: none !important;
@@ -456,12 +474,11 @@ export default {
   padding: 0.625rem 0;
   margin-right: 1.875rem;
   background-color: #ffffff;
-  border: 1px solid #409EFF;
+  border: 1px solid #409eff;
   border-radius: 0.375rem;
 }
 .resourceTreeScroll {
   height: 100%;
   overflow: auto;
 }
-
 </style>
