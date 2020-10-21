@@ -1,5 +1,5 @@
 <template>
-  <div class="flexColumn resourceBox">
+  <div class="flexColumn resourceBox layoutContent">
     <div class="resourceClassify">
       <div class="resourceClassifyTitle">档案分类</div>
       <el-upload
@@ -95,7 +95,7 @@
           </el-table>
 
           <el-pagination
-            class="resourcePage"
+            class="archivesPage"
             background
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
@@ -405,10 +405,6 @@ export default {
 </script>
 
 <style scoped>
-.resourceBox {
-  height: calc(100% - 5.625rem);
-  overflow: hidden;
-}
 
 .resourceClassify {
   margin-bottom: 1.875rem;
@@ -468,15 +464,4 @@ export default {
   overflow: auto;
 }
 
-/* .resourceTable /deep/ .el-table__body-wrapper {
-  height: calc(100% - 48px) !important;
-} */
-
-.resourcePage {
-  margin-top: 1.25rem;
-  padding-left: 0;
-}
- .resourcePage /deep/ .btn-prev{
-     margin-left: 0;
- }
 </style>

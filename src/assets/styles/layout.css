@@ -241,3 +241,12 @@
     font-size: 1rem;
     font-weight: bold;
   }
+
+  .el-breadcrumb{
+    line-height: inherit !important;
+  }
+  .layoutContent{
+    width: 100%;
+    height: calc(100% - 4.375rem);
+    overflow: hidden;
+  }
