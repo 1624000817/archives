@@ -32,18 +32,17 @@
         <el-table-column label="用户编号" min-width="200">
           <template slot-scope="scope">{{ scope.row.id }}</template>
         </el-table-column>
-        <el-table-column prop="address" label="登录账号" min-width="200">
+        <el-table-column prop="address" label="登录账号" min-width="350">
         </el-table-column>
-        <el-table-column prop="name" label="用户昵称" min-width="200">
+        <el-table-column prop="name" label="用户昵称" min-width="350">
         </el-table-column>
-        <el-table-column prop="time" label="注册时间" min-width="200">
+        <el-table-column prop="time" label="注册时间" min-width="350">
         </el-table-column>
         <el-table-column
           prop="cz"
           label="操作"
           show-overflow-tooltip
           width="250"
-          header-align="left"
           align="center"
         >
           <el-button type="primary" icon="el-icon-edit" size="mini"></el-button>
