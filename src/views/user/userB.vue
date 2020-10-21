@@ -38,21 +38,13 @@
         <el-table-column prop="time" label="注册时间" width="350">
         </el-table-column>
         <el-table-column prop="cz" label="操作" show-overflow-tooltip>
-          <el-button
-            type="primary"
-            icon="el-icon-edit"
-            size="mini"
-          ></el-button>
+          <el-button type="primary" icon="el-icon-edit" size="mini"></el-button>
           <el-button
             type="danger"
             icon="el-icon-delete"
             size="mini"
           ></el-button>
-          <el-button
-            type="info"
-            icon="el-icon-setting"
-            size="mini"
-          ></el-button>
+          <el-button type="info" icon="el-icon-setting" size="mini"></el-button>
         </el-table-column>
       </el-table>
       <el-pagination
@@ -181,7 +173,7 @@ export default {
 <style scoped>
 .userB {
   width: 100%;
-  height: calc(100% - 5.625rem);
+  height: calc(100% - 4.375rem);
   overflow: hidden;
 }
 
@@ -194,9 +186,9 @@ export default {
   flex: 1;
   display: flex;
 }
-.userBTable /deep/ .el-table td{
-    height: 48px;
-    padding: 0;
+.userBTable /deep/ .el-table td {
+  height: 48px;
+  padding: 0;
 }
 .el-pagination {
   margin-top: 1.25rem;
